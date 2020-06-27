@@ -1,12 +1,32 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <h1>Eet Da Burger!</h1>
+    <div class="col-12 center">
+    <img src="/assets/images/burger.png" alt="Smiling Burger" class="mx-auto center" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 text-center"></div>
+    <div class="col-sm-4"> 
+    <h1 class="text-center">Eet Da Burger!</h1>
+    </div>
+    <div class="col-sm-4 text-center"></div>
+    </div>
+  <div class="row">
+    <div class="col-sm-4 text-center"> Burger WishList </div>
+    <div class="col-sm-4"> 
+    <h1 class="text-center"></h1>
+    </div>
+    <div class="col-sm-4 text-center"> Burgers Eaten </div>
+    </div>
+
+    <div class="row"></div>
+
 
     
-    </div>
+    <div class="row"><p></p></div>
     <div class="row">
       <div class="col-sm-4">
-        <ul>
+        <ul class="list-group">
           {{#each burgers}}
           {{#unless eaten}}
           {{> burgers/burger-block eaten=false}}
@@ -16,14 +36,14 @@
       </div>
 
       <div class="col-sm-4">
-        <h2>Tell us which burger you'd like to eat.</h2>
+        <div id="subhead">Tell us which burger you'd like to eat.</div>
         <form class="create-form">
 
           <div class="form-group">
-            <input type="text" id="burg" name="name">
+            <input type="text" id="burg" name="name" placeholder="enter your delicious burger here">
           </div>
 
-          <button type="submit">Add to my Wish List</button>
+          <button type="submit" class="btn btn-dark btn-block">Add to my Wish List</button>
         </form>
       </div>
     
@@ -39,6 +59,4 @@
     </div>
   </div>
 
-</div>
-</div>
 </div>
